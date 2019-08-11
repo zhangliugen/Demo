@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mitumao.mapper.MtmAdminMapper">
+  <resultMap id="BaseResultMap" type="com.mitumao.pojo.MtmAdmin">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="SMALLINT" property="id" />
+    <result column="uuid" jdbcType="VARCHAR" property="uuid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="pwd_expiry_date" jdbcType="VARCHAR" property="pwdExpiryDate" />
+    <result column="failed_logins" jdbcType="VARCHAR" property="failedLogins" />
+    <result column="authority" jdbcType="VARCHAR" property="authority" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="contact_way" jdbcType="VARCHAR" property="contactWay" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+  </resultMap>
+  
+  <select id="selectAdminInfoByUserName" resultType="com.mitumao.pojo.MtmAdmin" 
+										 parameterType="java.lang.String">
+  	select 
+  		uuid,
+  		username,
+  		password,
+  		pwd_expiry_date,
+  		failed_logins,
+  		authority,
+  		description,
+  		contact_way,
+  		address
+  	from
+  		mtm_admin
+  	where 
+  		username=#{username,jdbcType=VARCHAR}
+  </select>
+  <insert id="saveAdminInfo"  parameterType="com.mitumao.pojo.MtmAdmin">
+  	insert into mtm_admin
+  	(
+  		uuid,
+  		username,
+  		password,
+  		pwd_expiry_date,
+  		failed_logins,
+  		authority,
+  		description,
+  		contact_way,
+  		address
+  	)
+  	values
+  	(
+  		#{uuid,jdbcType=VARCHAR},
+  		#{username,jdbcType=VARCHAR},
+  		#{password,jdbcType=VARCHAR},
+  		#{pwdExpiryDate,jdbcType=VARCHAR},
+  		#{failedLogins,jdbcType=VARCHAR},
+  		#{authority,jdbcType=VARCHAR},
+  		#{description,jdbcType=VARCHAR},
+  		#{contactWay,jdbcType=VARCHAR},
+  		#{address,jdbcType=VARCHAR}
+  	)
+  	
+  	
+  </insert>
+</mapper>

@@ -1,0 +1,70 @@
+body{
+	background: #015181; 
+}
+.welcome-ui{
+ 	width: 500px;
+	height:400px;
+	border:1px solid #e0e0e0;
+	background-color:#fff;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);   
+    -moz-transform: translate(-50%, -50%);   
+    -ms-transform: translate(-50%, -50%);   
+    -o-transform: translate(-50%, -50%);   
+    transform: translate(-50%, -50%); 
+}
+.welcome-title-ui{
+	width: 100%;
+	height: 48px;
+	text-align: center;
+	background-color: #397cf9;
+	color: #fff;
+	line-height: 48px;
+	font-size: 22px;
+}
+.welcome-content-ui{
+	margin-top:50px;
+	width: 100%;
+}
+.label-input-ui{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-indent: 10%;
+}
+.label-input-ui label{
+	display: inline-block;
+	width: 86px;	
+	text-indent: 0;
+}
+.label-input-ui input{
+	width: 45%;
+	height: 60%;
+}
+.code-input-ui{
+	width: 30% !important;
+	height: 60%;
+}
+.login-bt-ui{
+	width: 100%;
+	height:48px;
+	margin-top: 20px;
+}
+.login-bt-ui input{
+	width: 70%;
+	height:100%;
+	background-color: #0080ff;
+	color:#fff;
+	font-size:18px;
+	position: relative;
+	top:50%;
+	left: 50%;
+    transform: translate(-50%, -50%); 
+    -webkit-transform: translate(-50%, -50%);   
+    -moz-transform: translate(-50%, -50%);   
+    -ms-transform: translate(-50%, -50%);   
+    -o-transform: translate(-50%, -50%);   
+    transform: translate(-50%, -50%); 
+}

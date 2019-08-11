@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+<!--     <script th:src=@{static/js/jquery-2.1.1.min.js}></script> -->
+	<link th:href="@{/static/css/welcome.css}" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+	<h1 th:text="${msg}"></h1>
+	<form th:action="@{/login/login.do}" method="post" th:method="post">
+		<div class="welcome-ui">
+			<div class="welcome-title-ui">欢迎登录迷途猫后台系统</div>
+			<div class="welcome-content-ui">
+				<div class="label-input-ui">
+					<label>用户名：</label>
+					<input type="text" required="required" th:name="username">
+				</div>
+				<div class="label-input-ui">
+					<label>密码：</label>
+					<input type="password" required="required" th:name="password">
+				</div>
+				<div class="label-input-ui">
+					<label>验证码：</label>
+					<input class="code-input-ui" type="text">
+				</div>
+			</div>
+			<div class="login-bt-ui">
+				<input type="submit" th:value="登录">
+			</div>
+		</div>
+	</form>
+</body>
+</html>
